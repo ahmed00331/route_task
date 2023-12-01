@@ -55,8 +55,8 @@ class Products extends Equatable {
     title = json["title"] as String?;
     description = json["description"] as String?;
     price = json["price"] as int?;
-    discountPercentage = (json["discountPercentage"]).toDouble();
-    rating = (json["rating"]).toDouble();
+    discountPercentage = (json["discountPercentage"] as num?)?.toDouble();
+    rating = (json["rating"] as num?)?.toDouble();
     stock = json["stock"] as int?;
     brand = json["brand"] as String?;
     category = json["category"] as String?;
