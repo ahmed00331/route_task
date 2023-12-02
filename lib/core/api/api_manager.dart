@@ -12,7 +12,9 @@ class ApiManager {
     dio = Dio();
   }
 
-  Future<Response> getData() {
-    return dio.get('${Constants.baseURl}${EndPoints.productList}');
+  Future<Map<String, dynamic>> getData() async {
+    var response =
+        await dio.get('${Constants.baseURl}${EndPoints.productList}');
+    return response.data;
   }
 }

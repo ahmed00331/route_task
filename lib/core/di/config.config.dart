@@ -39,7 +39,8 @@ extension GetItInjectableX on _i1.GetIt {
     gh.singleton<_i3.ApiManager>(_i3.ApiManager());
     gh.factory<_i4.ProductListRepo>(() => _i5.ProductListRepoImpl());
     gh.factory<_i6.ProductListUseCase>(() => _i6.ProductListUseCase());
-    gh.factory<_i7.ProductRemoteDS>(() => _i8.ProductRemoteDSImpl());
+    gh.factory<_i7.ProductRemoteDS>(
+        () => _i8.ProductRemoteDSImpl(apiManager: gh<_i3.ApiManager>()));
     gh.factory<_i9.ProductsListCubit>(
         () => _i9.ProductsListCubit(gh<_i6.ProductListUseCase>()));
     return this;
